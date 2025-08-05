@@ -1,0 +1,26 @@
+<odoo>
+    <record id="inherit_maintenance_request" model="ir.ui.view">
+        <field name="name">Inherit Maintenance Request</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='archive_equipment_request']" position="after">
+                <button string="Create Task" type="object" name="action_open_quick_edit_wizard" class="btn-primary"/>
+            </xpath>
+
+            <xpath expr="//sheet/div[1]" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_view_task"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-tasks">
+                        <div class="o_stat_info">
+                            <field name="task_count" widget="statinfo" class="o_stat_value"/>
+                        </div>
+                    </button>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
