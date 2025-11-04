@@ -1,6 +1,6 @@
 {
     "name": " Create Task from Maintenance Request",
-    "version": "18.0",
+    "version": "19.0.1",
     'summary': """This module streamlines operations by automatically converting maintenance requests into project tasks. It eliminates manual work, enhances team collaboration, and ensures efficient tracking within project workflows.""",
     'description': """
 This module streamlines operations by automatically converting maintenance requests into project tasks.

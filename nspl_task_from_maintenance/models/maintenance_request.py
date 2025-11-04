@@ -2,8 +2,8 @@ from odoo import models, fields, api, _
 from odoo.exceptions import UserError
 
 
-class CalendarEvent(models.Model):
-    _inherit = 'calendar.event'
+class MaintenanceRequest(models.Model):
+    _inherit = 'maintenance.request'
 
     task_id = fields.Many2one('project.task', string='Related Task')
     task_count = fields.Integer(string='Task Count', compute='_compute_task_count')
@@ -42,7 +42,7 @@ class CalendarEvent(models.Model):
                 'name': _('Tasks'),
                 'res_model': 'project.task',
                 'domain': [('maintenance_id', '=', self.id)],
-                'view_mode': 'list,form',
+                'view_mode': 'tree,form',
                 'target': 'current',
             }
 
